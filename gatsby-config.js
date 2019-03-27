@@ -37,6 +37,7 @@ module.exports = {
         /**
          *  Content Plugins
          */
+        `gatsby-plugin-sass`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
