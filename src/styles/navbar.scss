@@ -5,13 +5,13 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-    height: 60px;
+    height: 50px;
     width: 100vw;
 
     background: $blue;
 
     /* Defining font-size here as the "root" font-size for nested elements. */
-    font-size: 18px;
+    font-size: 16px;
 
     * {
         margin: 0 15px;
@@ -19,6 +19,9 @@ nav {
         font-family: $staatliches;
         color: $white;
         font-weight: 400;
+    }
+    *::selection {
+        background: none;
     }
 
     h1 {
@@ -37,6 +40,8 @@ nav {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            margin-right: 30px;
 
 
             height: 100%;
