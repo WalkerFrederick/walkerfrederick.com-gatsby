@@ -1,13 +1,17 @@
-- groups:
-  - group: navigation
-    items:
-      - title: Home
-        link: /home
-        - title: Blog
-        link: /blog
-        - title: Projects
-        link: /projects
-        - title: Contact
-        link: /contact
-        - title: Store
-        link: /store
+- group: navigation
+  items:
+    - title: Home
+      link: /home
+      display: normal
+    - title: Blog
+      link: /blog
+      display: normal
+    - title: Projects
+      link: /projects
+      display: normal
+    - title: Contact
+      link: /contact
+      display: normal
+    - title: Store
+      link: /store
+      display: button

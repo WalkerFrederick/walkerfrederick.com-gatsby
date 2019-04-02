@@ -1,0 +1,63 @@
+@import './app.scss';
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 60px;
+    width: 100vw;
+
+    background: $blue;
+
+    /* Defining font-size here as the "root" font-size for nested elements. */
+    font-size: 18px;
+
+    * {
+        margin: 0 15px;
+        padding: 0;
+        font-family: $staatliches;
+        color: $white;
+        font-weight: 400;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        list-style: none;
+        justify-self: flex-end;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            height: 100%;
+
+            float: left;
+        }
+
+        .nav-button {
+            position: relative;
+            height: 70%;
+            padding: 0 35px;
+            background: $teal;
+        }
+        .nav-button:after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            border-right: 12px solid $teal;
+            border-top: 12px solid $blue;
+            width: 0;
+        }
+        
+    }
+}

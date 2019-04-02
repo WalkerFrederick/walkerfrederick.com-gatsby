@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { Navigation } from '.'
+import { Navbar } from '.'
 import config from '../../utils/siteConfig'
 
 // Styles
@@ -29,7 +29,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
         </Helmet>
 
         <div className="viewport">
-            
+            <Navbar/>
         </div>
 
     </>

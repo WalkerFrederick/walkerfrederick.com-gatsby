@@ -1,13 +1,11 @@
 - groups:
-  - group: socials
+  - group: navigation
     items:
-      - title: Home
+      - title: Github
         link: /home
-        - title: Blog
+      - title: LinkedIn
         link: /blog
-        - title: Projects
+      - title: Instagram
         link: /projects
-        - title: Contact
+      - title: Twitter
         link: /contact
-        - title: Store
-        link: /store
