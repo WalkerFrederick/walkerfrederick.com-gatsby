@@ -26,6 +26,10 @@ nav {
 
     h1 {
         font-size: 1.8em;
+        cursor: pointer;
+    }
+    h1:hover {
+        text-shadow: $textShadow;
     }
 
     ul {
@@ -47,22 +51,60 @@ nav {
             height: 100%;
 
             float: left;
+
+            .Link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+            }
+            .Link:hover {
+                text-shadow: $textShadow;
+            }
         }
 
         .nav-button {
             position: relative;
-            height: 70%;
+            height: 70% !important;
             padding: 0 35px;
             background: $teal;
+            cursor: pointer;
         }
         .nav-button:after {
             content: '';
             position: absolute;
             top: 0; left: 0;
-            border-right: 12px solid $teal;
-            border-top: 12px solid $blue;
+            border-right: 0px solid $teal;
+            border-top: 0px solid $blue;
             width: 0;
         }
+        .nav-button:hover:after {
+            animation: foldingCorner .5s forwards;
+        }
         
+        @keyframes foldingCorner {
+            from {
+                border-right: 0px solid $teal;
+                border-top: 0px solid $blue;
+            }
+            to {
+                border-right: 15px solid $teal;
+                border-top: 15px solid $blue;
+            }
+        }
+    }
+}
+
+.social-nav {
+    background: none;
+    * {
+        color:$blue;
+        margin: 0 5px;
+    }
+    .Link-social:hover {
+        text-shadow: none;
     }
 }

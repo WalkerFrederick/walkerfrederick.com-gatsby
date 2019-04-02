@@ -28,12 +28,16 @@ class Navbar extends React.Component {
     }
 
     navigationLinks() {
-        
-        let navigation = this.navigation.items.map((item) => {
-            return (<li key={item.title} className={`nav-${item.display}`}>{item.title}</li>)
+        let navigation = this.navigation.items.map((item, i) => {
+            return (<li key={i}><Link className={`Link Link-${item.display} nav-${item.display}`} to={item.link}>{item.title}</Link></li>)
         })
-
         return navigation
+    }
+    socialLinks() {
+        let social = this.social.items.map((item, i) => {
+            return (<li key={i}><a className={`Link-social`} href={item.link}>{item.title}</a></li>)
+        })
+        return social
     }
 
     render() {
@@ -43,6 +47,11 @@ class Navbar extends React.Component {
                     <h1>walker frederick</h1>
                     <ul>
                         {this.navigationLinks()}
+                    </ul>
+                </nav>
+                <nav className={`social-nav`}>
+                    <ul>
+                        {this.socialLinks()}
                     </ul>
                 </nav>
             </>

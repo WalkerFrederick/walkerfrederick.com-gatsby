@@ -1,7 +1,7 @@
 - group: navigation
   items:
     - title: Home
-      link: /home
+      link: /
       display: normal
     - title: Blog
       link: /blog

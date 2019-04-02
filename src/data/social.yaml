@@ -1,11 +1,10 @@
-- groups:
-  - group: navigation
-    items:
-      - title: Github
-        link: /home
-      - title: LinkedIn
-        link: /blog
-      - title: Instagram
-        link: /projects
-      - title: Twitter
-        link: /contact
+- group: navigation
+  items:
+    - title: Github
+      link: /home
+    - title: LinkedIn
+      link: /blog
+    - title: Instagram
+      link: /projects
+    - title: Twitter
+      link: /contact
