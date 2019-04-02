@@ -75,3 +75,20 @@ yarn-error.log
 
 # Custom
 .ghost.json
+
+
+# ignore in file window
+.eslintrc.js
+
+LICENSE
+
+netlify.toml
+
+package-lock.json
+
+yarn.lock
+
+.eslintignore
+
+.editorconfig
+
