@@ -203,7 +203,18 @@ nav {
         left: 0;
         right: 0;
 
-        background: rgba(0, 0, 0, 0.60);
+        background: rgb(46, 46, 46);
+        opacity: 0;
+        animation: fadein .5s forwards;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: .60;
+        }
     }
 
     @keyframes slideOut {

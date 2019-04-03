@@ -30,6 +30,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
         <div className="viewport">
             <Navbar/>
+            {children}
         </div>
 
     </>

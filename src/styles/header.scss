@@ -1,0 +1,29 @@
+@import './navbar.scss';
+.header {
+    width: 100%;
+    background: $blue;
+    box-shadow: $boxShadow;
+    max-width: 1012px;
+
+    display: flex;
+}
+.header-lg {
+    height: 500px;
+    margin-bottom: 100px;
+}
+.header-md {
+    height: 250px;
+}
+.header-sm {
+    height: 50px;
+}
+
+
+.header-inner-left {
+    height: 100%;
+    width: 50%;
+}
+.header-inner-right {
+    height: 100%;
+    width: 50%;
+}

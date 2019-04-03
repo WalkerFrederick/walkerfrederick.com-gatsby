@@ -24,7 +24,6 @@ class Navbar extends React.Component {
 
     async toggleNavbar() {
         await this.setState({ navbarShown: !this.state.navbarShown })
-        console.log(this.state.navbarShown)
     }
 
     navigationLinks() {
@@ -47,13 +46,14 @@ class Navbar extends React.Component {
 
     componentDidMount() {
         window.addEventListener(`scroll`, this.hasScrolled.bind(this))
+        this.navblock.addEventListener(`click`, this.toggleNavbar.bind(this))
     }
 
     render() {
         return (
             <>
                 <nav ref={(com) => { this.navbar = com }} style={this.state.navbarStyles}>
-                    <div className={`nav-block nav-block-${this.state.navbarShown}`}> </div>
+                    <div ref={(com) => { this.navblock = com }} className={`nav-block nav-block-${this.state.navbarShown}`}> </div>
                     <h1>walker frederick</h1>
                     <ul>
                         <div onClick={this.toggleNavbar.bind(this)} className={`nav-btn`}>

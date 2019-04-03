@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import { Layout, PostCard, Pagination } from '../components/common'
+import { Header } from '../components/layout'
 import { MetaData } from '../components/common/meta'
 
 /**
@@ -15,11 +16,13 @@ import { MetaData } from '../components/common/meta'
 */
 const Index = ({ data, location, pageContext }) => {
     const posts = data.allGhostPost.edges
+    const settings = data.allGhostSettings.edges
 
     return (
         <>
             <MetaData location={location} />
-            <Layout isHome={true}>
+            <Layout>
+                <Header size={`lg`}/>
                 <div className="container">
                     <section className="post-feed">
                         {posts.map(({ node }) => (
@@ -27,7 +30,6 @@ const Index = ({ data, location, pageContext }) => {
                             <PostCard key={node.id} post={node} />
                         ))}
                     </section>
-                    <Pagination pageContext={pageContext} />
                 </div>
             </Layout>
         </>
@@ -37,6 +39,7 @@ const Index = ({ data, location, pageContext }) => {
 Index.propTypes = {
     data: PropTypes.shape({
         allGhostPost: PropTypes.object.isRequired,
+        allGhostSettings: PropTypes.object.isRequired,
     }).isRequired,
     location: PropTypes.shape({
         pathname: PropTypes.string.isRequired,
@@ -59,6 +62,20 @@ export const pageQuery = graphql`
           ...GhostPostFields
         }
       }
+    }
+    allGhostSettings {
+        edges {
+            node {
+                ...GhostSettingsFields
+            }
+        }
+    }
+    file(relativePath: {eq: "ghost-icon.png"}) {
+        childImageSharp {
+            fixed(width: 30, height: 30) {
+                ...GatsbyImageSharpFixed
+            }
+        }
     }
   }
 `
