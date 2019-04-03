@@ -1,7 +1,7 @@
 - group: navigation
   items:
     - title: Github
-      link: /home
+      link: https://github.com/WalkerFrederick
     - title: LinkedIn
       link: /blog
     - title: Instagram

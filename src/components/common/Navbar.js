@@ -8,12 +8,6 @@ import '../../styles/navbar.scss'
 /**
 * Navbar component
 *
-* The Navbar component takes an array of your Ghost
-* Navbar property that is fetched from the settings.
-* It differentiates between absolute (external) and relative link (internal).
-* You can pass it a custom class for your own styles, but it will always fallback
-* to a `site-nav-item` class.
-*
 */
 class Navbar extends React.Component {
     constructor(props){
@@ -24,6 +18,7 @@ class Navbar extends React.Component {
 
         this.state = {
             navbarShown: null,
+            navbarStyles: {},
         }
     }
 
@@ -37,14 +32,27 @@ class Navbar extends React.Component {
         return navigation
     }
     socialLinks() {
-        let social = this.social.items.map((item, i) => <li key={i}><a className={`Link-social`} href={item.link}>{item.title}</a></li>)
+        let social = this.social.items.map((item, i) => <li key={i}><a target="_blank" rel="noopener noreferrer" className={`Link-social`} href={item.link}>{item.title}</a></li>)
         return social
+    }
+
+    hasScrolled() {
+        if (window.pageYOffset > 10) {
+            this.setState({ navbarStyles: { boxShadow: `2px 4px 4px rgba(0, 0, 0, 0.15)` } })
+        }
+        else {
+            this.setState({ navbarStyles: { boxShadow: `none` } })
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener(`scroll`, this.hasScrolled.bind(this))
     }
 
     render() {
         return (
             <>
-                <nav>
+                <nav ref={(com) => { this.navbar = com }} style={this.state.navbarStyles}>
                     <h1>walker frederick</h1>
                     <ul>
                         <div onClick={this.toggleNavbar.bind(this)} className={`nav-btn`}>
