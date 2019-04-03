@@ -1,6 +1,11 @@
 @import './app.scss';
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,6 +44,32 @@ nav {
         list-style: none;
         justify-self: flex-end;
         margin: 0;
+
+        .nav-btn {
+            height: 100%;
+            width: 50px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            span {
+                display: block;
+                height: 4px;
+                width: 70%;
+
+                margin: 0;
+                background: $white;
+            }
+            :nth-child(2) {
+                margin: 5px 0;
+            }
+        }
+        .nav-btn:hover {
+            cursor: pointer;
+            span {
+                box-shadow: $boxShadow;
+            }
+        }
 
         li {
             display: flex;
@@ -99,6 +130,9 @@ nav {
 }
 
 .social-nav {
+    position: relative;
+    z-index: 0;
+    margin-top: 50px;
     background: none;
     * {
         color:$blue;
@@ -106,5 +140,69 @@ nav {
     }
     .Link-social:hover {
         text-shadow: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .nav-btn {
+        display: flex !important;
+    }
+    .nav-links {
+        position: absolute;
+        top: 50px;
+        right: -100vw;
+        padding-top: 20px;
+
+        flex-direction: column;
+        height: 100vh;
+
+        box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.15);
+
+        background: $white;
+
+        * {
+            color: $blue;
+            font-size: 1.2em;
+        }
+
+        li {
+            height: 7vh;
+            width: 70vw;
+            max-width: 300px;
+            text-align: left;
+        }
+        .Link:hover {
+            text-shadow: none;
+        }
+        .nav-button {
+            background: none;
+        }
+        .nav-button::after {
+            display: none;
+        }
+    }
+    .nav-links-false {
+        animation: slideIn 1s forwards;
+    }
+    .nav-links-true {
+        animation: slideOut 1s forwards;
+
+    }
+
+    @keyframes slideOut {
+        from {
+            right: -100vw;
+        }
+        to {
+            right: 0;
+        }
+    }
+    @keyframes slideIn {
+        from {
+            right: 0;
+        }
+        to {
+            right: -100vw;
+        }
     }
 }

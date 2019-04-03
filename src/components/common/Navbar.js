@@ -23,20 +23,21 @@ class Navbar extends React.Component {
         this.social = getFromYaml(`social`)
 
         this.state = {
-
+            navbarShown: null,
         }
     }
 
+    async toggleNavbar() {
+        await this.setState({ navbarShown: !this.state.navbarShown })
+        console.log(this.state.navbarShown)
+    }
+
     navigationLinks() {
-        let navigation = this.navigation.items.map((item, i) => {
-            return (<li key={i}><Link className={`Link Link-${item.display} nav-${item.display}`} to={item.link}>{item.title}</Link></li>)
-        })
+        let navigation = this.navigation.items.map((item, i) => <li key={i}><Link className={`Link Link-${item.display} nav-${item.display}`} to={item.link}>{item.title}</Link></li>)
         return navigation
     }
     socialLinks() {
-        let social = this.social.items.map((item, i) => {
-            return (<li key={i}><a className={`Link-social`} href={item.link}>{item.title}</a></li>)
-        })
+        let social = this.social.items.map((item, i) => <li key={i}><a className={`Link-social`} href={item.link}>{item.title}</a></li>)
         return social
     }
 
@@ -46,7 +47,14 @@ class Navbar extends React.Component {
                 <nav>
                     <h1>walker frederick</h1>
                     <ul>
-                        {this.navigationLinks()}
+                        <div onClick={this.toggleNavbar.bind(this)} className={`nav-btn`}>
+                            <span/>
+                            <span/>
+                            <span/>
+                        </div>
+                        <ul className={`nav-links nav-links-${this.state.navbarShown}`}>
+                            {this.navigationLinks()}
+                        </ul>
                     </ul>
                 </nav>
                 <nav className={`social-nav`}>
