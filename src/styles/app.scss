@@ -530,6 +530,8 @@ h6 {
 
 .viewport {
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .container {

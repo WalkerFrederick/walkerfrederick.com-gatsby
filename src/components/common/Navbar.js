@@ -53,6 +53,7 @@ class Navbar extends React.Component {
         return (
             <>
                 <nav ref={(com) => { this.navbar = com }} style={this.state.navbarStyles}>
+                    <div className={`nav-block nav-block-${this.state.navbarShown}`}> </div>
                     <h1>walker frederick</h1>
                     <ul>
                         <div onClick={this.toggleNavbar.bind(this)} className={`nav-btn`}>
