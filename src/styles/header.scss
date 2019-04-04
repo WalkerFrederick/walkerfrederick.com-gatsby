@@ -8,22 +8,43 @@
     display: flex;
 }
 .header-lg {
-    height: 500px;
+    height: 400px;
     margin-bottom: 100px;
 }
 .header-md {
-    height: 250px;
+    height: 200px;
 }
 .header-sm {
-    height: 50px;
+    height: 100px;
 }
 
 
 .header-inner-left {
     height: 100%;
-    width: 50%;
+    width: 70%;
+    background: url(./test.jpg);
+    background-position: center;
+    background-size: cover;
+    .header-linear-gradient {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(267.89deg, #4299E1 13.44%, rgba(255, 255, 255, 0) 125.67%), linear-gradient(60.76deg, #4FD1C5 5.19%, rgba(255, 255, 255, 0) 71.77%);
+    }
 }
 .header-inner-right {
     height: 100%;
-    width: 50%;
+    width: 30%;
+}
+
+@media screen and (max-width: 800px) {
+    .header-inner-left {
+        height: 100%;
+        width: 100%;
+        .header-linear-gradient {
+            background: linear-gradient(258.4deg, $blue 4.88%, rgba(255, 255, 255, 0) 125.69%), linear-gradient(60.76deg, $teal 5.19%, rgba(255, 255, 255, 0) 71.77%);
+        }
+    }
+    .header-inner-right {
+        display: none;
+    }
 }

@@ -24,7 +24,7 @@ class Header extends React.Component {
             <>
                 <header className={`header header-${this.props.size}`}>
                     <div className="header-inner-left">
-                    
+                        <div className="header-linear-gradient"></div>
                     </div>
                     <div className="header-inner-right">
                     
