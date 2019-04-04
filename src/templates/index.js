@@ -22,7 +22,7 @@ const Index = ({ data, location, pageContext }) => {
         <>
             <MetaData location={location} />
             <Layout>
-                <Header size={`lg`}/>
+                <Header size={`lg`} cover_image={settings[0].node.cover_image} title={settings[0].node.description}/>
                 <div className="container">
                     <section className="post-feed">
                         {posts.map(({ node }) => (

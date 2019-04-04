@@ -15,23 +15,20 @@ class Header extends React.Component {
         this.state = {
             
         }
-
-        console.log(this.props.coverImage)
     }
 
     render() {
         return (
             <>
                 <header className={`header header-${this.props.size}`}>
-                    <div className="header-inner-left">
+                    <div className="header-inner-left" style={{ background: `url(${this.props.cover_image})` }}>
                         <div className="header-linear-gradient"></div>
                     </div>
                     <div className="header-inner-right">
 
                     </div>
                     <div className="header-inner-content">
-                        <h1>build a better web.</h1>
-                        <p>Ever wanted to get data from a website but found that it lacked a public API? Well Web Scraping has got you covered, literally any data that is rendered on a web page can be scraped for your own personal use.</p>
+                        <h1>{this.props.title}</h1>
                         <Link className="button" to={`/contact`}>Work with me</Link>
                     </div>
                 </header>

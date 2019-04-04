@@ -26,9 +26,8 @@
 .header-inner-left {
     height: 100%;
     width: 70%;
-    background: url(./test.jpg);
-    background-position: center;
-    background-size: cover;
+    background-position: center !important;
+    background-size: cover !important;
     .header-linear-gradient {
         height: 100%;
         width: 100%;
