@@ -45,6 +45,7 @@
     top: 0;
     right: 0;
     width: 70%;
+    height: 100%;
     margin: 15px;
 
 
@@ -62,6 +63,12 @@
         position: absolute;
         right: 0;
         width: 60%;
+    }
+    .button {
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+        min-width: 200px;
     }
 }
 
@@ -82,8 +89,7 @@
         left: 0;
 
         p {
-            position: relative;
-            width: auto;
+            display: none;
         }
     }
 }
