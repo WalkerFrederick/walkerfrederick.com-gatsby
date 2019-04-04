@@ -6,6 +6,10 @@
     max-width: 1012px;
 
     display: flex;
+
+    position: relative;
+
+   font-size: 16px; 
 }
 .header-lg {
     height: 400px;
@@ -36,6 +40,31 @@
     width: 30%;
 }
 
+.header-inner-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    margin: 15px;
+
+
+    color: $white;
+    text-align: right;
+    margin: 15px;
+
+    h1 {
+        font-family: $staatliches;
+        font-size: 4em;
+        font-weight: 600;
+        color: $white;
+    }
+    p {
+        position: absolute;
+        right: 0;
+        width: 60%;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .header-inner-left {
         height: 100%;
@@ -46,5 +75,15 @@
     }
     .header-inner-right {
         display: none;
+    }
+    .header-inner-content {
+        width: auto;
+        text-align: left;
+        left: 0;
+
+        p {
+            position: relative;
+            width: auto;
+        }
     }
 }

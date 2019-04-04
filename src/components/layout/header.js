@@ -27,7 +27,11 @@ class Header extends React.Component {
                         <div className="header-linear-gradient"></div>
                     </div>
                     <div className="header-inner-right">
-                    
+
+                    </div>
+                    <div className="header-inner-content">
+                        <h1>build a better web.</h1>
+                        <p>Ever wanted to get data from a website but found that it lacked a public API? Well Web Scraping has got you covered, literally any data that is rendered on a web page can be scraped for your own personal use.</p>
                     </div>
                 </header>
             </>
