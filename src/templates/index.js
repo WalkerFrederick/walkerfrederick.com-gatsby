@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import { Layout, PostCard, Pagination } from '../components/common'
 import { Header } from '../components/layout'
+import { FeaturedCard } from '../components/cards'
 import { MetaData } from '../components/common/meta'
 
 /**
@@ -24,6 +25,12 @@ const Index = ({ data, location, pageContext }) => {
             <Layout>
                 <Header size={`lg`} cover_image={settings[0].node.cover_image} title={settings[0].node.description}/>
                 <div className="container">
+                    <section className="post-feed">
+                        {posts.map(({ node }) => (
+                            // The tag below includes the markup for each post - components/common/PostCard.js
+                            <FeaturedCard key={node.id} post={node} />
+                        ))}
+                    </section>
                     <section className="post-feed">
                         {posts.map(({ node }) => (
                             // The tag below includes the markup for each post - components/common/PostCard.js
