@@ -1,4 +1,64 @@
+@import '../../styles/navbar.scss';
+
 .featured-card {
     height: auto;
     width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: $white;
+    border-left: 8px solid $blue; 
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+
+    text-decoration: none !important;
+
+}
+.featured-card:hover {
+    box-shadow: $boxShadow;
+}
+.featured-card-image {
+    width: 40%;
+    height: 100%;
+}
+.featured-card-content {
+    max-width: 60%;
+    height: 100%;
+    padding: 0 0 0 25px;
+
+    * {
+        color: $grey;
+    }
+
+    h1 {
+        font-family: $staatliches;
+        color: $blue;
+    }
+    p {
+        margin: 10px 0;
+    }
+    .reading-time {
+        color: $teal;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .featured-card {
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 0;
+
+        border: none;
+        .featured-card-image {
+            width: auto;
+            height: auto;
+        }
+        .featured-card-content {
+            max-width: none;
+            padding: 25px;
+        }
+    }
 }
