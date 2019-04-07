@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout, PostCard, Pagination } from '../components/common'
+import { Layout, Pagination } from '../components/common'
 import { Header } from '../components/layout'
-import { FeaturedCard } from '../components/cards'
+import { FeaturedCard, PostCard } from '../components/cards'
 import { MetaData } from '../components/common/meta'
 
 /**
@@ -31,7 +31,7 @@ const Index = ({ data, location, pageContext }) => {
                             <FeaturedCard key={node.id} post={node} />
                         ))}
                     </section>
-                    <section className="post-feed">
+                    <section className="post-feed-single">
                         {posts.map(({ node }) => (
                             // The tag below includes the markup for each post - components/common/PostCard.js
                             <PostCard key={node.id} post={node} />

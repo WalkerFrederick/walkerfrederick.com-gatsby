@@ -39,9 +39,11 @@
     p {
         margin: 10px 0;
     }
-    .reading-time {
-        color: $teal;
-    }
+
+}
+
+.reading-time {
+    color: $teal;
 }
 
 @media screen and (max-width: 980px) {
@@ -61,4 +63,12 @@
             padding: 25px;
         }
     }
+}
+
+.post-card {
+    h1 {
+        font-family: $staatliches;
+        color: $blue;
+    }
+
 }
