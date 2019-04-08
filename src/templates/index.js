@@ -16,10 +16,10 @@ import { MetaData } from '../components/common/meta'
 *
 */
 const Index = ({ data, location, pageContext }) => {
-    const posts = data.allGhostPost.edges
     const featured = data.allGhostPost.edges.filter(node => {
         return node.node.featured
     })
+    const posts = data.allGhostPost.edges.filter((node, i) => !(node === featured[i]))
     console.log(featured)
     const settings = data.allGhostSettings.edges
 
