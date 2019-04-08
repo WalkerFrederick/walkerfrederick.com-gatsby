@@ -17,6 +17,10 @@ import { MetaData } from '../components/common/meta'
 */
 const Index = ({ data, location, pageContext }) => {
     const posts = data.allGhostPost.edges
+    const featured = data.allGhostPost.edges.filter(node => {
+        return node.node.featured
+    })
+    console.log(featured)
     const settings = data.allGhostSettings.edges
 
     return (
@@ -26,7 +30,7 @@ const Index = ({ data, location, pageContext }) => {
                 <Header size={`lg`} cover_image={settings[0].node.cover_image} title={settings[0].node.description}/>
                 <div className="container">
                     <section className="post-feed">
-                        {posts.map(({ node }) => (
+                        {featured.map(({ node }) => (
                             // The tag below includes the markup for each post - components/common/PostCard.js
                             <FeaturedCard key={node.id} post={node} />
                         ))}
