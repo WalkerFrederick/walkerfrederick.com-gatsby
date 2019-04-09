@@ -34,6 +34,14 @@ class Footer extends React.Component {
         return (
             <>
                 <footer className={`footer`}>
+                    <div className="footer-navigation">
+                        <div className="footer-navigation-inner">
+                            <h1>Walker Frederick</h1>
+                            <ul>
+                                {this.navigationLinks()}
+                            </ul>
+                        </div>
+                    </div>
                     <div className="footer-social">
                         <ul>
                             {this.socialLinks()}

@@ -1,13 +1,44 @@
 @import './header.scss';
 .footer {
     width: 100vw;
-    min-height: 300px;
     background: $blue;
+    display: flex;
+    justify-content: center;
 
     position: relative;
 
+    .footer-navigation {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 1012px;
+        padding: 25px 25px 80px 25px;
+
+        .footer-navigation-inner {
+            max-width: 1012px;
+        }
+
+        h1 {
+            color: $white;
+            font-family: $staatliches;
+        }
+
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            .Link {
+                color: $white;
+            }
+        }
+    }
+
     .footer-social {
         position: absolute;
+        display: flex;
+        justify-content: center;
         bottom: 0;
         width: 100%;
         height: 50px;
@@ -16,6 +47,7 @@
 
         ul {
             width: 100%;
+            max-width: 1012px;
             height: 100%;
             margin: 0;
             display: flex;
