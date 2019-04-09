@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { Navbar } from '.'
+import { Footer, Navbar } from '../layout'
 import config from '../../utils/siteConfig'
 
 // Styles
@@ -31,6 +31,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
         <div className="viewport">
             <Navbar/>
             {children}
+            <Footer/>
         </div>
 
     </>

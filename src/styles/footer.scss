@@ -1,0 +1,30 @@
+@import './header.scss';
+.footer {
+    width: 100vw;
+    min-height: 300px;
+    background: $blue;
+
+    position: relative;
+
+    .footer-social {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background: $teal;
+        box-shadow: 3px -3px 3px rgba($color: #000000, $alpha: 0.15);
+
+        ul {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+        .Link {
+            margin: 0 5px;
+            color: $white;
+        }
+    }
+}

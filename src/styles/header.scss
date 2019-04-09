@@ -4,6 +4,7 @@
     background: $blue;
     box-shadow: $boxShadow;
     max-width: 1012px;
+    margin-bottom: 50px;
 
     display: flex;
 
@@ -13,7 +14,6 @@
 }
 .header-lg {
     height: 400px;
-    margin-bottom: 100px;
 }
 .header-md {
     height: 200px;
