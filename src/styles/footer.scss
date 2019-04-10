@@ -34,6 +34,14 @@
             }
         }
     }
+    @media screen and (min-width: 1012px) {
+        .footer-navigation {
+            padding: 25px 0 75px 0 !important;
+        }
+        .footer-social ul {
+            padding: 0 !important;
+        }
+    }
 
     .footer-social {
         position: absolute;
